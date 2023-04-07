@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230407 15:25:26.989" rpa="false" schemaversion="3">
+<suite id="s1" name="Getting-Started" source="/home/lab/github/robot-test-automation/Getting-Started.robot">
+<kw name="Open Connection And Log In" type="SETUP">
+<for flavor="IN">
+<var>${KEY}</var>
+<var>${HOST}</var>
+<value>&amp;{HOSTS}</value>
+<iter>
+<var name="${KEY}">pe1</var>
+<var name="${HOST}">pe1</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20230407 15:25:27.102" endtime="20230407 15:25:27.102"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20230407 15:25:27.103" level="INFO">Logging into 'pe1:22' as 'cisco'.</msg>
+<msg timestamp="20230407 15:25:28.331" level="INFO">Read output: 
+
+RP/0/RP0/CPU0:PE1#</msg>
+<status status="PASS" starttime="20230407 15:25:27.102" endtime="20230407 15:25:28.331"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:27.101" endtime="20230407 15:25:28.331"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:27.101" endtime="20230407 15:25:28.331"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:27.101" endtime="20230407 15:25:28.331"/>
+</iter>
+<iter>
+<var name="${KEY}">p2</var>
+<var name="${HOST}">p2</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20230407 15:25:28.333" endtime="20230407 15:25:28.333"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20230407 15:25:28.334" level="INFO">Logging into 'p2:22' as 'cisco'.</msg>
+<msg timestamp="20230407 15:25:29.557" level="INFO">Read output: 
+
+RP/0/RP0/CPU0:P2#</msg>
+<status status="PASS" starttime="20230407 15:25:28.334" endtime="20230407 15:25:29.558"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:28.332" endtime="20230407 15:25:29.558"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:28.332" endtime="20230407 15:25:29.558"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:28.332" endtime="20230407 15:25:29.558"/>
+</iter>
+<iter>
+<var name="${KEY}">p3</var>
+<var name="${HOST}">p3</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20230407 15:25:29.559" endtime="20230407 15:25:29.561"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20230407 15:25:29.562" level="INFO">Logging into 'p3:22' as 'cisco'.</msg>
+<msg timestamp="20230407 15:25:30.764" level="INFO">Read output: 
+
+RP/0/RP0/CPU0:P3#</msg>
+<status status="PASS" starttime="20230407 15:25:29.561" endtime="20230407 15:25:30.764"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:29.558" endtime="20230407 15:25:30.764"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:29.558" endtime="20230407 15:25:30.764"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:29.558" endtime="20230407 15:25:30.764"/>
+</iter>
+<iter>
+<var name="${KEY}">p4</var>
+<var name="${HOST}">p4</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20230407 15:25:30.765" endtime="20230407 15:25:30.766"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20230407 15:25:30.766" level="INFO">Logging into 'p4:22' as 'cisco'.</msg>
+<msg timestamp="20230407 15:25:31.984" level="INFO">Read output: 
+
+RP/0/RP0/CPU0:P4#</msg>
+<status status="PASS" starttime="20230407 15:25:30.766" endtime="20230407 15:25:31.985"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:30.764" endtime="20230407 15:25:31.985"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:30.764" endtime="20230407 15:25:31.985"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:30.764" endtime="20230407 15:25:31.985"/>
+</iter>
+<iter>
+<var name="${KEY}">pe5</var>
+<var name="${HOST}">pe5</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:31.986" endtime="20230407 15:25:31.986"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:31.986" endtime="20230407 15:25:31.986"/>
+</kw>
+<status status="NOT RUN" starttime="20230407 15:25:31.985" endtime="20230407 15:25:31.986"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:31.985" endtime="20230407 15:25:31.986"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:31.985" endtime="20230407 15:25:31.986"/>
+</iter>
+<iter>
+<var name="${KEY}">p6</var>
+<var name="${HOST}">p6</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:31.987" endtime="20230407 15:25:31.987"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:31.988" endtime="20230407 15:25:31.988"/>
+</kw>
+<status status="NOT RUN" starttime="20230407 15:25:31.987" endtime="20230407 15:25:31.988"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:31.987" endtime="20230407 15:25:31.988"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:31.987" endtime="20230407 15:25:31.988"/>
+</iter>
+<iter>
+<var name="${KEY}">p7</var>
+<var name="${HOST}">p7</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20230407 15:25:31.989" endtime="20230407 15:25:31.990"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20230407 15:25:31.990" level="INFO">Logging into 'p7:22' as 'cisco'.</msg>
+<msg timestamp="20230407 15:25:33.215" level="INFO">Read output: 
+
+RP/0/RP0/CPU0:P7#</msg>
+<status status="PASS" starttime="20230407 15:25:31.990" endtime="20230407 15:25:33.216"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:31.988" endtime="20230407 15:25:33.216"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:31.988" endtime="20230407 15:25:33.216"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:31.988" endtime="20230407 15:25:33.216"/>
+</iter>
+<iter>
+<var name="${KEY}">p8</var>
+<var name="${HOST}">p8</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:33.217" endtime="20230407 15:25:33.217"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:33.217" endtime="20230407 15:25:33.217"/>
+</kw>
+<status status="NOT RUN" starttime="20230407 15:25:33.216" endtime="20230407 15:25:33.217"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:33.216" endtime="20230407 15:25:33.217"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:33.216" endtime="20230407 15:25:33.218"/>
+</iter>
+<iter>
+<var name="${KEY}">p9</var>
+<var name="${HOST}">p9</var>
+<if>
+<branch type="IF" condition="&quot;${HOST}&quot; == &quot;pe1&quot; or &quot;${HOST}&quot; == &quot;p2&quot; or &quot;${HOST}&quot; == &quot;p3&quot; or &quot;${HOST}&quot; == &quot;p7&quot; or &quot;${HOST}&quot; == &quot;p4&quot;">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<arg>alias=${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:33.219" endtime="20230407 15:25:33.219"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<status status="NOT RUN" starttime="20230407 15:25:33.219" endtime="20230407 15:25:33.219"/>
+</kw>
+<status status="NOT RUN" starttime="20230407 15:25:33.218" endtime="20230407 15:25:33.219"/>
+</branch>
+<status status="PASS" starttime="20230407 15:25:33.218" endtime="20230407 15:25:33.219"/>
+</if>
+<status status="PASS" starttime="20230407 15:25:33.218" endtime="20230407 15:25:33.219"/>
+</iter>
+<status status="PASS" starttime="20230407 15:25:27.101" endtime="20230407 15:25:33.219"/>
+</for>
+<status status="PASS" starttime="20230407 15:25:27.101" endtime="20230407 15:25:33.220"/>
+</kw>
+<test id="s1-t1" name="Test Suite" line="31">
+<kw name="Switch Connection" library="SSHLibrary">
+<arg>pe1</arg>
+<doc>Switches the active connection by index or alias.</doc>
+<status status="PASS" starttime="20230407 15:25:33.220" endtime="20230407 15:25:33.221"/>
+</kw>
+<kw name="PE1 - IPv4 Address Configuration" library="resource">
+<doc>IPv4 Address Configuration</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show ipv4 interface brief</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:33.222" level="INFO">Executing command 'show ipv4 interface brief'.</msg>
+<msg timestamp="20230407 15:25:33.557" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:33.557" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:33.763 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+Loopback0                      1.1.1.1         Up              Up       default 
+M...</msg>
+<status status="PASS" starttime="20230407 15:25:33.222" endtime="20230407 15:25:33.557"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>12.0.0.1</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:33.557" endtime="20230407 15:25:33.557"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:33.221" endtime="20230407 15:25:33.558"/>
+</kw>
+<kw name="PE1 - Ping to P2" library="resource">
+<doc>Ping to P2</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>ping 12.0.0.2 source 12.0.0.1</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:33.559" level="INFO">Executing command 'ping 12.0.0.2 source 12.0.0.1'.</msg>
+<msg timestamp="20230407 15:25:34.402" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:34.402" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:34.277 UTC
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 12.0.0.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2...</msg>
+<status status="PASS" starttime="20230407 15:25:33.558" endtime="20230407 15:25:34.402"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>100 percent</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:34.402" endtime="20230407 15:25:34.402"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:33.558" endtime="20230407 15:25:34.403"/>
+</kw>
+<kw name="PE1 - ISIS Adjacency" library="resource">
+<doc>ISIS Adjacency</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show isis adjacency</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:34.404" level="INFO">Executing command 'show isis adjacency'.</msg>
+<msg timestamp="20230407 15:25:34.898" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:34.898" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:35.116 UTC
+
+IS-IS IGP Level-2 adjacencies:
+System Id      Interface                SNPA           State Hold Changed  NSF IPv4 IPv6
+                                           ...</msg>
+<status status="PASS" starttime="20230407 15:25:34.403" endtime="20230407 15:25:34.898"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>P2</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:34.899" endtime="20230407 15:25:34.899"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:34.403" endtime="20230407 15:25:34.899"/>
+</kw>
+<kw name="PE1 - Full Routing Table" library="resource">
+<doc>Full Routing Table</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show route</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:34.900" level="INFO">Executing command 'show route'.</msg>
+<msg timestamp="20230407 15:25:35.525" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:35.526" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:35.635 UTC
+
+Codes: C - connected, S - static, R - RIP, B - BGP, (&gt;) - Diversion path
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSS...</msg>
+<status status="PASS" starttime="20230407 15:25:34.900" endtime="20230407 15:25:35.526"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>2.2.2.2</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:35.526" endtime="20230407 15:25:35.527"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>3.3.3.3</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:35.527" endtime="20230407 15:25:35.527"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>4.4.4.4</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:35.527" endtime="20230407 15:25:35.528"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>5.5.5.5</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:35.528" endtime="20230407 15:25:35.528"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>6.6.6.6</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:35.529" endtime="20230407 15:25:35.529"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>7.7.7.7</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:35.529" endtime="20230407 15:25:35.529"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>8.8.8.8</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:35.530" endtime="20230407 15:25:35.530"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:34.899" endtime="20230407 15:25:35.530"/>
+</kw>
+<kw name="PE1 - ISIS Route to PE5" library="resource">
+<doc>ISIS Route to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show isis route 5.5.5.5/32 detail</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:35.531" level="INFO">Executing command 'show isis route 5.5.5.5/32 detail'.</msg>
+<msg timestamp="20230407 15:25:36.041" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:36.041" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:36.260 UTC
+
+L2 5.5.5.5/32 [40/115] Label: None, medium priority
+   Installed Apr 07 13:25:20.208 for 02:00:16
+     via 12.0.0.2, GigabitEthernet0/0/0/2, P2, SRGB Base: 16000, ...</msg>
+<status status="PASS" starttime="20230407 15:25:35.531" endtime="20230407 15:25:36.042"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>PE5</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:36.042" endtime="20230407 15:25:36.042"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:35.530" endtime="20230407 15:25:36.043"/>
+</kw>
+<kw name="PE1 - Route to PE5" library="resource">
+<doc>Route to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show route 5.5.5.5/32 detail</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:36.044" level="INFO">Executing command 'show route 5.5.5.5/32 detail'.</msg>
+<msg timestamp="20230407 15:25:36.602" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:36.602" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:36.772 UTC
+
+Routing entry for 5.5.5.5/32
+  Known via "isis IGP", distance 115, metric 40, type level-2
+  Installed Apr  7 13:25:20.209 for 02:00:16
+  Routing Descriptor Block...</msg>
+<status status="PASS" starttime="20230407 15:25:36.044" endtime="20230407 15:25:36.602"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>12.0.0.2</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:36.602" endtime="20230407 15:25:36.603"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:36.043" endtime="20230407 15:25:36.603"/>
+</kw>
+<kw name="PE1 - LDP Neighbor" library="resource">
+<doc>LDP Neighbor</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show mpls ldp neighbor brief</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:36.604" level="INFO">Executing command 'show mpls ldp neighbor brief'.</msg>
+<msg timestamp="20230407 15:25:37.105" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:37.105" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:37.337 UTC
+
+Peer               GR  NSR  Up Time     Discovery   Addresses     Labels    
+                                        ipv4  ipv6  ipv4  ipv6  ipv4   ipv6 
+---------...</msg>
+<status status="PASS" starttime="20230407 15:25:36.604" endtime="20230407 15:25:37.105"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>2.2.2.2</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.105" endtime="20230407 15:25:37.106"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:36.603" endtime="20230407 15:25:37.106"/>
+</kw>
+<kw name="PE1 - MPLS Forwarding" library="resource">
+<doc>MPLS Forwarding</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show mpls forwarding</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:37.107" level="INFO">Executing command 'show mpls forwarding'.</msg>
+<msg timestamp="20230407 15:25:37.734" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:37.734" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:37.825 UTC
+Local  Outgoing    Prefix             Outgoing     Next Hop        Bytes       
+Label  Label       or ID              Interface                    Switched    
+-----...</msg>
+<status status="PASS" starttime="20230407 15:25:37.107" endtime="20230407 15:25:37.734"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>2.2.2.2</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.734" endtime="20230407 15:25:37.735"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>3.3.3.3</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.735" endtime="20230407 15:25:37.735"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>4.4.4.4</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.735" endtime="20230407 15:25:37.735"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>5.5.5.5</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.736" endtime="20230407 15:25:37.736"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>6.6.6.6</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.736" endtime="20230407 15:25:37.736"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>7.7.7.7</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.736" endtime="20230407 15:25:37.737"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>8.8.8.8</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.737" endtime="20230407 15:25:37.737"/>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>unlabel</arg>
+<arg>ignore_case=True</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:37.737" endtime="20230407 15:25:37.738"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:37.106" endtime="20230407 15:25:37.738"/>
+</kw>
+<kw name="PE1 - CEF" library="resource">
+<doc>CEF</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show cef 5.5.5.5/32</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:37.739" level="INFO">Executing command 'show cef 5.5.5.5/32'.</msg>
+<msg timestamp="20230407 15:25:38.317" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:38.317" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:38.480 UTC
+5.5.5.5/32, version 218, internal 0x1000001 0x30 (ptr 0xe7c4760) [1], 0x600 (0xdfe3458), 0xa28 (0xebfeaa8)
+ Updated Apr  7 13:25:20.237 
+ remote adjacency to Gigabit...</msg>
+<status status="PASS" starttime="20230407 15:25:37.739" endtime="20230407 15:25:38.317"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>local label \\d+</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230407 15:25:38.318" endtime="20230407 15:25:38.318"/>
+</kw>
+<kw name="Should Match Regexp" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>labels imposed {\\d+}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" starttime="20230407 15:25:38.318" endtime="20230407 15:25:38.319"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:37.738" endtime="20230407 15:25:38.319"/>
+</kw>
+<kw name="PE1 - Traceroute MPLS to PE5" library="resource">
+<doc>Traceroute MPLS to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>traceroute mpls multipath ipv4 5.5.5.5/32 verbose</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:38.320" level="INFO">Executing command 'traceroute mpls multipath ipv4 5.5.5.5/32 verbose'.</msg>
+<msg timestamp="20230407 15:25:38.982" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:38.983" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:39.049 UTC
+
+Starting LSP Path Discovery for 5.5.5.5/32
+
+Codes: '!' - success, 'Q' - request not sent, '.' - timeout,
+  'L' - labeled output interface, 'B' - unlabeled output ...</msg>
+<status status="PASS" starttime="20230407 15:25:38.319" endtime="20230407 15:25:38.983"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Path 0 found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:38.983" endtime="20230407 15:25:38.983"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Path 1 found</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:38.984" endtime="20230407 15:25:38.984"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>34.0.0.4 45.0.0.5</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:38.984" endtime="20230407 15:25:38.984"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>47.0.0.4 45.0.0.5</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:38.985" endtime="20230407 15:25:38.985"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>45.0.0.5, ret code 3 multipaths 0</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:38.985" endtime="20230407 15:25:38.985"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:38.319" endtime="20230407 15:25:38.985"/>
+</kw>
+<kw name="PE1 - MPLS Label Forwarding" library="resource">
+<doc>MPLS Label Forwarding to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show mpls forwarding prefix 5.5.5.5/32</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:38.986" level="INFO">Executing command 'show mpls forwarding prefix 5.5.5.5/32'.</msg>
+<msg timestamp="20230407 15:25:39.568" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:39.568" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:39.708 UTC
+Local  Outgoing    Prefix             Outgoing     Next Hop        Bytes       
+Label  Label       or ID              Interface                    Switched    
+-----...</msg>
+<status status="PASS" starttime="20230407 15:25:38.986" endtime="20230407 15:25:39.568"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Gi0/0/0/2</arg>
+<arg>12.0.0.2</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:39.568" endtime="20230407 15:25:39.569"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:38.986" endtime="20230407 15:25:39.569"/>
+</kw>
+<kw name="Switch Connection" library="SSHLibrary">
+<arg>p2</arg>
+<doc>Switches the active connection by index or alias.</doc>
+<status status="PASS" starttime="20230407 15:25:39.569" endtime="20230407 15:25:39.569"/>
+</kw>
+<kw name="P2 - MPLS Label Forwarding" library="resource">
+<doc>MPLS Label Forwarding to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show mpls forwarding prefix 5.5.5.5/32</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:39.570" level="INFO">Executing command 'show mpls forwarding prefix 5.5.5.5/32'.</msg>
+<msg timestamp="20230407 15:25:40.009" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:40.010" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:39.215 UTC
+Local  Outgoing    Prefix             Outgoing     Next Hop        Bytes       
+Label  Label       or ID              Interface                    Switched    
+-----...</msg>
+<status status="PASS" starttime="20230407 15:25:39.570" endtime="20230407 15:25:40.010"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Gi0/0/0/0</arg>
+<arg>23.0.0.3</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:40.010" endtime="20230407 15:25:40.011"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Gi0/0/0/3</arg>
+<arg>27.0.0.7</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:40.011" endtime="20230407 15:25:40.012"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:39.569" endtime="20230407 15:25:40.012"/>
+</kw>
+<kw name="Switch Connection" library="SSHLibrary">
+<arg>p3</arg>
+<doc>Switches the active connection by index or alias.</doc>
+<status status="PASS" starttime="20230407 15:25:40.012" endtime="20230407 15:25:40.013"/>
+</kw>
+<kw name="P3 - MPLS Label Forwarding" library="resource">
+<doc>MPLS Label Forwarding to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show mpls forwarding prefix 5.5.5.5/32</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:40.013" level="INFO">Executing command 'show mpls forwarding prefix 5.5.5.5/32'.</msg>
+<msg timestamp="20230407 15:25:40.462" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:40.462" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:40.033 UTC
+Local  Outgoing    Prefix             Outgoing     Next Hop        Bytes       
+Label  Label       or ID              Interface                    Switched    
+-----...</msg>
+<status status="PASS" starttime="20230407 15:25:40.013" endtime="20230407 15:25:40.462"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Gi0/0/0/2</arg>
+<arg>34.0.0.4</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:40.463" endtime="20230407 15:25:40.464"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:40.013" endtime="20230407 15:25:40.465"/>
+</kw>
+<kw name="Switch Connection" library="SSHLibrary">
+<arg>p7</arg>
+<doc>Switches the active connection by index or alias.</doc>
+<status status="PASS" starttime="20230407 15:25:40.465" endtime="20230407 15:25:40.466"/>
+</kw>
+<kw name="P7 - MPLS Label Forwarding" library="resource">
+<doc>MPLS Label Forwarding to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show mpls forwarding prefix 5.5.5.5/32</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:40.469" level="INFO">Executing command 'show mpls forwarding prefix 5.5.5.5/32'.</msg>
+<msg timestamp="20230407 15:25:40.887" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:40.887" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:40.185 UTC
+Local  Outgoing    Prefix             Outgoing     Next Hop        Bytes       
+Label  Label       or ID              Interface                    Switched    
+-----...</msg>
+<status status="PASS" starttime="20230407 15:25:40.468" endtime="20230407 15:25:40.887"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Gi0/0/0/4</arg>
+<arg>47.0.0.4</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:40.888" endtime="20230407 15:25:40.888"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:40.467" endtime="20230407 15:25:40.889"/>
+</kw>
+<kw name="Switch Connection" library="SSHLibrary">
+<arg>p4</arg>
+<doc>Switches the active connection by index or alias.</doc>
+<status status="PASS" starttime="20230407 15:25:40.889" endtime="20230407 15:25:40.889"/>
+</kw>
+<kw name="P4 - MPLS Label Forwarding" library="resource">
+<doc>MPLS Label Forwarding to PE5</doc>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${OUTPUT}</var>
+<arg>show mpls forwarding prefix 5.5.5.5/32</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20230407 15:25:40.891" level="INFO">Executing command 'show mpls forwarding prefix 5.5.5.5/32'.</msg>
+<msg timestamp="20230407 15:25:41.305" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20230407 15:25:41.305" level="INFO">${OUTPUT} = 
+
+Fri Apr  7 15:25:40.834 UTC
+Local  Outgoing    Prefix             Outgoing     Next Hop        Bytes       
+Label  Label       or ID              Interface                    Switched    
+-----...</msg>
+<status status="PASS" starttime="20230407 15:25:40.890" endtime="20230407 15:25:41.305"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${OUTPUT}</arg>
+<arg>Gi0/0/0/0</arg>
+<arg>45.0.0.5</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230407 15:25:41.306" endtime="20230407 15:25:41.306"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:40.890" endtime="20230407 15:25:41.307"/>
+</kw>
+<status status="PASS" starttime="20230407 15:25:33.220" endtime="20230407 15:25:41.307"/>
+</test>
+<kw name="Close All Connections" library="SSHLibrary" type="TEARDOWN">
+<doc>Closes all open connections.</doc>
+<status status="PASS" starttime="20230407 15:25:41.309" endtime="20230407 15:25:41.310"/>
+</kw>
+<doc>IGP Transport Verification</doc>
+<status status="PASS" starttime="20230407 15:25:26.990" endtime="20230407 15:25:41.310"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Getting-Started">Getting-Started</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
